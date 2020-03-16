@@ -1,0 +1,483 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Twitter -->
+    <meta name="twitter:site" content="@themepixels">
+    <meta name="twitter:creator" content="@themepixels">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Azia">
+    <meta name="twitter:description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="twitter:image" content="http://themepixels.me/azia/img/azia-social.png">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="http://themepixels.me/azia">
+    <meta property="og:title" content="Azia">
+    <meta property="og:description" content="Responsive Bootstrap 4 Dashboard Template">
+
+    <meta property="og:image" content="http://themepixels.me/azia/img/azia-social.png">
+    <meta property="og:image:secure_url" content="http://themepixels.me/azia/img/azia-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+
+    <!-- Meta -->
+    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="author" content="ThemePixels">
+
+    <title>KENO</title>
+
+    <!-- vendor css -->
+    <link rel='stylesheet' href="{% static 'lib/fontawesome-free/css/all.min.css' %}">
+    <link rel='stylesheet' href="{% static 'lib/ionicons/css/ionicons.min.css' %}">
+    <link rel='stylesheet' href="{% static 'lib/typicons.font/typicons.css' %}">
+    <link rel='stylesheet' href="{% static 'lib/jqvmap/jqvmap.min.css' %}">
+
+    <!-- azia CSS -->
+    <link rel='stylesheet' href="{% static 'css/azia.css' %}">
+
+  </head>
+  <body class="az-body az-body-sidebar az-body-dashboard-nine">
+
+    <div class="az-sidebar az-sidebar-sticky az-sidebar-indigo-dark">
+      <div class="az-sidebar-header">
+        <a href="index.html" class="az-logo">KE<span>N</span>O</a>
+      </div><!-- az-sidebar-header -->
+      <div class="az-sidebar-loggedin">
+        <div class="az-img-user online"><img src="https://via.placeholder.com/500x500" alt=""></div>
+        <div class="media-body">
+          <h6>Fulana</h6>
+          <span>Cajera</span>
+        </div><!-- media-body -->
+      </div><!-- az-sidebar-loggedin -->
+      <div class="az-sidebar-body">
+        <ul class="nav">
+          <li class="nav-label">Menu</li>
+          <li class="nav-item active show">
+            <a href="#" class="nav-link with-sub"><i class="typcn typcn-clipboard"></i>Apuestas</a>
+          </li><!-- nav-item -->
+          <li class="nav-item">
+            <a href="reporte_diario.html" class="nav-link with-sub"><i class="typcn typcn-chart-bar-outline"></i>Reportes</a>
+          </li><!-- nav-item -->
+          <li class="nav-item">
+            <a href="" class="nav-link with-sub"><i class="typcn typcn-clipboard"></i>Consultas</a>
+           
+          </li><!-- nav-item -->
+        
+        </ul><!-- nav -->
+      </div><!-- az-sidebar-body -->
+    </div><!-- az-sidebar -->
+    <div class="az-content az-content-dashboard-nine">
+      <div class="az-header az-header-dashboard-nine">
+        <div class="container-fluid">
+          <div class="az-header-left">
+            <a href="" id="azSidebarToggle" class="az-header-menu-icon"><span></span></a>
+          </div><!-- az-header-left -->
+          
+        </div><!-- container -->
+      </div><!-- az-header -->
+      <div class="az-content-header">
+        <div class="az-content-header-top">
+          <div>
+            <h2 class="az-content-title mg-b-5 mg-b-lg-8">Punto De Venta</h2>
+            <p class="mg-b-0">Keno Super Doble Machuka.</p>
+          </div>
+          
+        </div><!-- az-content-body-title -->
+        <div class="nav-wrapper">
+          <nav class="nav az-nav-line">
+            <a href="apuestas.html" class="nav-link">Apuesta normal</a>
+            <a href="#" class="nav-link active">Apuesta rapida</a>
+          </nav>
+        </div><!-- nav-wrapper -->
+      </div><!-- az-content-header -->
+      <div class="az-content-body">
+
+        <div class="row row-sm">
+       
+          <!-- ============================================================================= -->
+          <div class="col-md-4 col-xl-5 mg-t-20">
+            <div class="card card-body card-dashboard-twentythree ht-xl-100p">
+              <h6 class="card-title tx-30 mg-t-10">Keno</h6><hr>
+
+
+              <div class="row row-sm">
+               <div class="col-sm-6 col-md-3"><h2 class="card-title tx-20 mg-b-40">Numeros</h2></div>
+                <div class="col-sm-6 col-md-3">
+                  <select class="form-control select2-no-search">
+                    <option label="Cantidad"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+              </div><!-- row -->
+            </div>
+          </div>
+          
+          <!-- ============================================================================= -->
+
+
+          <div class="col-md-4 col-xl-3 mg-t-20">
+            <div class="card card-body card-dashboard-twentythree ht-xl-100p">
+              <h6 class="card-title tx-30 mg-t-10">Valor</h6><hr>
+
+              <div class="card-body">
+                <nav class="nav nav-pills">
+                    <a class="nav-link active" data-toggle="tab" href="#">25</a>
+                    <a class="nav-link" data-toggle="tab" href="#">50</a>
+                    <a class="nav-link" data-toggle="tab" href="#">100</a>
+                    <a class="nav-link" data-toggle="tab" href="#">250</a>
+                    <a class="nav-link" data-toggle="tab" href="#">500</a>
+                  </nav>
+                
+              </div><!-- card-top-content -->
+              <div class="card-header ">
+                <p><b>Desea apostar a las cartas ?</b></p>
+                <nav class="nav nav-pills">
+                  <a class="nav-link active" data-toggle="tab" href="#">No</a>
+                    <a class="nav-link" data-toggle="tab" href="#">Si</a>
+                </nav>
+              </div><!-- chart-wrapper -->
+            </div><!-- card -->
+          </div><!-- col -->
+
+
+          <!-- ============================================================================= -->
+
+
+          <div class="col-md-4 col-xl-4 mg-t-20">
+            <div class="card card-body card-dashboard-twentythree ht-xl-100p">
+              <h6 class="card-title tx-30 mg-t-10">Cartas</h6><hr>
+
+    
+              <div class="card-body mg-t-5">
+                <nav class="nav nav-pills">
+                    <a class="nav-link mg-l-50" data-toggle="tab" href="#"><img src="{% static 'Cartas/Black1.png' %}"></a>
+                    <a class="nav-link mg-l-50" data-toggle="tab" href="#"><img src="{% static 'Cartas/Black2.png' %}"></a>
+                    <a class="nav-link mg-l-50" data-toggle="tab" href="#"><img src="{% static 'Cartas/Red1.png' %}"></a>
+                    <a class="nav-link mg-l-50" data-toggle="tab" href="#"><img src="{% static 'Cartas/Red2.png' %}"></a>
+                  </nav>
+              </div>    
+
+              <div class="col-lg-4 mg-t-20 mg-b-50 mg-l-20">
+                <select class="form-control select2-no-search">
+                  <option label="Valor"></option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="150">150</option>
+                   <option value="250">250</option>
+                  <option value="300">300</option>
+                  <option value="350">350</option>
+                   <option value="400">400</option>
+                  <option value="450">450</option>
+                  <option value="500">500</option>
+                   <option value="1000">1000</option>
+                  <option value="1500">1500</option>
+                  <option value="2000">2000</option>
+                   <option value="2500">2500</option>
+                  <option value="3000">3000</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================================================================= -->
+
+              <div class="row row-xs wd-xl-50p mg-t-40">
+                <div class="col-sm-6 col-md-3"><button class="btn btn-outline-indigo btn-block">Cancelar</button></div>
+                <div class="col-sm-6 col-md-3"><button class="btn btn-outline-indigo btn-block">Imprimir</button></div>
+              </div><!-- row -->
+         
+
+
+
+        </div><!-- row -->
+      </div><!-- az-content-body -->
+      <div class="az-footer">
+        <div class="container-fluid">
+          <span>&copy; 2020 .....</span>
+          <span>Designed by: ...</span>
+        </div><!-- container -->
+      </div><!-- az-footer -->
+    </div><!-- az-content -->
+
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/ionicons/ionicons.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.js"></script>
+    <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="../lib/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../lib/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="../js/azia.js"></script>
+    <script src="../js/dashboard.sampledata.js"></script>
+    <script>
+      $(function(){
+        'use strict'
+
+        $('.az-sidebar .with-sub').on('click', function(e){
+          e.preventDefault();
+          $(this).parent().toggleClass('show');
+          $(this).parent().siblings().removeClass('show');
+        })
+
+        $(document).on('click touchstart', function(e){
+          e.stopPropagation();
+
+          // closing of sidebar menu when clicking outside of it
+          if(!$(e.target).closest('.az-header-menu-icon').length) {
+            var sidebarTarg = $(e.target).closest('.az-sidebar').length;
+            if(!sidebarTarg) {
+              $('body').removeClass('az-sidebar-show');
+            }
+          }
+        });
+
+
+        $('#azSidebarToggle').on('click', function(e){
+          e.preventDefault();
+
+          if(window.matchMedia('(min-width: 992px)').matches) {
+            $('body').toggleClass('az-sidebar-hide');
+          } else {
+            $('body').toggleClass('az-sidebar-show');
+          }
+        });
+
+        new PerfectScrollbar('.az-sidebar-body', {
+          suppressScrollX: true
+        });
+
+        /* ----------------------------------- */
+        /* Dashboard content */
+
+
+        $.plot('#flotChart1', [{
+            data: dashData1,
+            color: '#6f42c1'
+          }], {
+          series: {
+            shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 1 } ] }
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+          yaxis: {
+            show: false,
+            min: 0,
+            max: 100
+          },
+          xaxis: { show: false }
+        });
+
+        $.plot('#flotChart2', [{
+            data: dashData2,
+            color: '#007bff'
+          }], {
+          series: {
+            shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 1 } ] }
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+          yaxis: {
+            show: false,
+            min: 0,
+            max: 100
+          },
+          xaxis: { show: false }
+        });
+
+        $.plot('#flotChart3', [{
+            data: dashData3,
+            color: '#f10075'
+          }], {
+          series: {
+            shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 1 } ] }
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+          yaxis: {
+            show: false,
+            min: 0,
+            max: 100
+          },
+          xaxis: { show: false }
+        });
+
+        $.plot('#flotChart4', [{
+            data: dashData4,
+            color: '#00cccc'
+          }], {
+          series: {
+            shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: true,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 1 } ] }
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            labelMargin: 0
+          },
+          yaxis: {
+            show: false,
+            min: 0,
+            max: 100
+          },
+          xaxis: { show: false }
+        });
+
+        $.plot('#flotChart5', [{
+            data: dashData2,
+            color: '#00cccc'
+          },{
+            data: dashData3,
+            color: '#007bff'
+          },{
+            data: dashData4,
+            color: '#f10075'
+          }], {
+          series: {
+            shadowSize: 0,
+            lines: {
+              show: true,
+              lineWidth: 2,
+              fill: false,
+              fillColor: { colors: [ { opacity: 0 }, { opacity: 1 } ] }
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            labelMargin: 20
+          },
+          yaxis: {
+            show: false,
+            min: 0,
+            max: 100
+          },
+          xaxis: {
+            show: true,
+            color: 'rgba(0,0,0,.16)',
+            ticks: [
+              [0, ''],
+              [10, '<span>Nov</span><span>05</span>'],
+              [20, '<span>Nov</span><span>10</span>'],
+              [30, '<span>Nov</span><span>15</span>'],
+              [40, '<span>Nov</span><span>18</span>'],
+              [50, '<span>Nov</span><span>22</span>'],
+              [60, '<span>Nov</span><span>26</span>'],
+              [70, '<span>Nov</span><span>30</span>'],
+            ]
+          }
+        });
+
+        $.plot('#flotChart6', [{
+            data: dashData2,
+            color: '#6f42c1'
+          },{
+            data: dashData3,
+            color: '#007bff'
+          },{
+            data: dashData4,
+            color: '#00cccc'
+          }], {
+          series: {
+            shadowSize: 0,
+            stack: true,
+            bars: {
+              show: true,
+              lineWidth: 0,
+              fill: 0.85
+              //fillColor: { colors: [ { opacity: 0 }, { opacity: 1 } ] }
+            }
+          },
+          grid: {
+            borderWidth: 0,
+            labelMargin: 20
+          },
+          yaxis: {
+            show: false,
+            min: 0,
+            max: 100
+          },
+          xaxis: {
+            show: true,
+            color: 'rgba(0,0,0,.16)',
+            ticks: [
+              [0, ''],
+              [10, '<span>Nov</span><span>05</span>'],
+              [20, '<span>Nov</span><span>10</span>'],
+              [30, '<span>Nov</span><span>15</span>'],
+              [40, '<span>Nov</span><span>18</span>'],
+              [50, '<span>Nov</span><span>22</span>'],
+              [60, '<span>Nov</span><span>26</span>'],
+              [70, '<span>Nov</span><span>30</span>'],
+            ]
+          }
+        });
+
+        $('#vmap').vectorMap({
+          map: 'world_en',
+          showTooltip: true,
+          backgroundColor: '#f8f9fa',
+          color: '#ced4da',
+          colors: {
+            us: '#6610f2',
+            gb: '#8b4bf3',
+            ru: '#aa7df3',
+            cn: '#c8aef4',
+            au: '#dfd3f2'
+          },
+          hoverColor: '#222',
+          enableZoom: false,
+          borderOpacity: .3,
+          borderWidth: 3,
+          borderColor: '#fff',
+          hoverOpacity: .85
+        });
+
+      });
+    </script>
+  </body>
+</html>
+
