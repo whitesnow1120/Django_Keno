@@ -62,7 +62,7 @@ $(function () {
 
         let elements = keno.split(' ').map(Number);
 
-        if (elements.length == 10)
+        if (elements.length <= 10 && elements.length > 0)
             return true;
         else 
             return false;
@@ -98,11 +98,15 @@ $(function () {
 
                         });
 
+                        $(this).val(keno + ' ');
+
                     } else {
 
                         alert ('You inputted duplicated value. Please input again.');
 
                         $('#keno').val(removeLastValue(keno));
+
+                        $(this).val($(this).val() + ' ');
 
                     }
                     
@@ -110,6 +114,10 @@ $(function () {
                 } else {
 
                     alert ('please input the correct number between 1 and 80.')
+
+                    $('#keno').val(removeLastValue(keno));
+
+                    $(this).val($(this).val() + ' ');
                     
                 }
 
@@ -190,8 +198,7 @@ $(function () {
                     keno_valor: keno_valor, 
                     cartas_valor:cartas_valor, 
                     cartas_alta_baja:cartas_alta_baja, 
-                    cartas_color:cartas_color,
-                    'csrfmiddlewaretoken':$( "#csrfmiddlewaretoken" ).val()
+                    cartas_color:cartas_color
             },
             success: function (data) {
                 alert(data);
