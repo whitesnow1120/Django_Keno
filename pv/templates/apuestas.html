@@ -101,7 +101,7 @@
             </div><!-- nav-wrapper -->
         </div><!-- az-content-header -->
       
-        <form method="POST" role="form" class="form-inline" action="">{% csrf_token %}
+        <form method="POST" role="form" class="form-inline" action="{% url 'apuestas' %}">{% csrf_token %}
             <div class="az-content-body">
                 <div class="row row-sm">
                 <!-- ============================================================================= -->
@@ -123,16 +123,7 @@
                                         </div>
                                         
                                         <div class='apuestas_ball_div'>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
-                                            <a class="apuestas_ball"><img src="{% static 'pv/img/Pelotas/Bola1.png' %}" height="50" width="50"></a>
+                                            
                                         </div>
                                         
                                     </nav>
@@ -149,20 +140,20 @@
                             <h6 class="card-title tx-30 mg-t-10">Valor</h6><hr>
 
                             <div class="card-body">
-                                <nav class="nav nav-pills">
-                                    <a class="nav-link active" data-toggle="tab" href="#">25</a>
-                                    <a class="nav-link" data-toggle="tab" href="#">50</a>
-                                    <a class="nav-link" data-toggle="tab" href="#">100</a>
-                                    <a class="nav-link" data-toggle="tab" href="#">250</a>
-                                    <a class="nav-link" data-toggle="tab" href="#">500</a>
+                                <nav class="nav nav-pills valor-header">
+                                    <a class="nav-link active" data-toggle="tab">25</a>
+                                    <a class="nav-link" data-toggle="tab">50</a>
+                                    <a class="nav-link" data-toggle="tab">100</a>
+                                    <a class="nav-link" data-toggle="tab">250</a>
+                                    <a class="nav-link" data-toggle="tab">500</a>
                                 </nav>
                             </div><!-- card-top-content -->
 
                             <div class="card-header ">
                                 <p><b>Desea apostar a las cartas ?</b></p>
-                                <nav class="nav nav-pills">
-                                <a class="nav-link active" data-toggle="tab" id="noCartas" onclick="HideElement()"href="#">No</a>
-                                <a class="nav-link" data-toggle="tab" id="venderCartas" onclick="ShowElement()" href="#">Si</a>
+                                <nav class="nav nav-pills valor-footer">
+                                    <a class="nav-link active" data-toggle="tab" id="noCartas">No</a>
+                                    <a class="nav-link" data-toggle="tab" id="venderCartas">Si</a>
                                 </nav>                
                             </div><!-- chart-wrapper -->
                         </div><!-- card -->
@@ -179,10 +170,10 @@
                     
                             <div class="card-body mg-t-5">
                                 <nav class="nav nav-pills" id="cartas">
-                                    <a class="nav-link" data-toggle="tab" href="#"><img src="{% static 'pv/img/Cartas/Black1.png' %}"></a>
-                                    <a class="nav-link" data-toggle="tab" href="#"><img src="{% static 'pv/img/Cartas/Black2.png' %}"></a>
-                                    <a class="nav-link" data-toggle="tab" href="#"><img src="{% static 'pv/img/Cartas/Red1.png' %}"></a>
-                                    <a class="nav-link" data-toggle="tab" href="#"><img src="{% static 'pv/img/Cartas/Red2.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Negra' data-alta_baja='Alta'><img src="{% static 'pv/img/Cartas/Black1.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Negra' data-alta_baja='Baja'><img src="{% static 'pv/img/Cartas/Black2.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Roja' data-alta_baja='Alta'><img src="{% static 'pv/img/Cartas/Red1.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Roja' data-alta_baja='Baja'><img src="{% static 'pv/img/Cartas/Red2.png' %}"></a>
                                 </nav>
                             </div>    
 
@@ -212,8 +203,8 @@
             <!-- ============================================================================= -->
 
                     <div class="row row-xs wd-xl-50p mg-t-40">
-                        <div class="col-sm-6 col-md-3"><button class="btn btn-outline-indigo btn-block">Cancelar</button></div>
-                        <div class="col-sm-6 col-md-3"><button class="btn btn-outline-indigo btn-block">Imprimir</button></div>
+                        <div class="col-sm-6 col-md-3"><button class="btn btn-outline-indigo btn-block" id='cancelar'>Cancelar</button></div>
+                        <div class="col-sm-6 col-md-3"><button class="btn btn-outline-indigo btn-block" id='imprimir'>Imprimir</button></div>
                     </div><!-- row -->
                 </div><!-- row -->
             </form>
@@ -242,50 +233,6 @@
     <script src="{% static 'pv/js/apuestas.js' %}"></script>
 
 
-    <script>
-      $("#cartas").hide();
-      $("#apuestaCarta").hide();
-
-      function ShowElement(){
-        let text = "";
-
-        if ($("#venderCartas").text() === "Si"){
-          $("#cartas").show();
-          $("#apuestaCarta").show();
-          text = "No";
-        }
-        else{
-          $("#cartas").hide();
-          $("#apuestaCarta").hide();
-          text = "Si";
-
-        }
-
-        $("venderCartas").html(text);
-
-      }
-
-    function HideElement(){
-        let text = "";
-
-        if ($("#noCartas").text() === "No"){
-          $("#cartas").hide();
-          $("#apuestaCarta").hide();
-          text = "Si";
-        }
-        else{
-          $("#cartas").show();
-          $("#apuestaCarta").show();
-          text = "No";
-
-        }
-
-        $("noCartas").html(text);
-
-      }
-
-
-    </script>
     <script>
       $(function(){
         'use strict'

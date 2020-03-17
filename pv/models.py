@@ -10,7 +10,7 @@ class Localidad(models.Model):
 		return '{}'.format(self.nombre_localidad)
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'localidad'
 		
 
@@ -38,7 +38,7 @@ class PuntoVenta(models.Model):
 		super(PuntoVenta, self).save()
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'punto_venta'
 
 class PosPc(models.Model):
@@ -60,7 +60,7 @@ class PosPc(models.Model):
 		super(PosPc, self).save()
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'pos_pc'
 
 
@@ -82,7 +82,7 @@ class Cajero(models.Model):
 		super(Cajero, self).save()
 	
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'cajero'
 
 class Sorteos(models.Model):
@@ -96,7 +96,7 @@ class Sorteos(models.Model):
 	numero_carta = models.IntegerField(db_column='numero_carta')  # Field name made lowercase.
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'SORTEOS'
 
 class CartonCartas(models.Model):
@@ -106,11 +106,11 @@ class CartonCartas(models.Model):
 	valor_apuesta_c = models.IntegerField(db_column='valor_apuesta_c')  # Field name made lowercase.
 	fecha_cartas = models.TextField(db_column='fecha_cartas')  # Field name made lowercase.
 	hora_cartas = models.TextField(db_column='hora_cartas')  # Field name made lowercase.
-	id_sorteos = models.ForeignKey('Sorteos', models.DO_NOTHING, db_column='id_sorteos')  # Field name made lowercase.
-	id_cajero = models.ForeignKey('Cajero', models.DO_NOTHING, db_column='id_cajero')  # Field name made lowercase.
+	id_sorteos = models.ForeignKey('Sorteos', models.DO_NOTHING, db_column='id_sorteos', null=True)  # Field name made lowercase.
+	id_cajero = models.ForeignKey('Cajero', models.DO_NOTHING, db_column='id_cajero', null=True)  # Field name made lowercase.
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'carton_cartas'
 
 
@@ -120,11 +120,11 @@ class CartonKeno(models.Model):
 	valor_apuesta_k = models.IntegerField(db_column='valor_apuesta_k')  # Field name made lowercase.
 	fecha_keno = models.TextField(db_column='fecha_keno')  # Field name made lowercase.
 	hora_keno = models.TextField(db_column='hora_keno')  # Field name made lowercase.
-	id_sorteos = models.ForeignKey('Sorteos', models.DO_NOTHING, db_column='id_sorteos')  # Field name made lowercase.
-	id_cajero = models.ForeignKey('Cajero', models.DO_NOTHING, db_column='id_cajero')  # Field name made lowercase.
+	id_sorteos = models.ForeignKey('Sorteos', models.DO_NOTHING, db_column='id_sorteos', null=True)  # Field name made lowercase.
+	id_cajero = models.ForeignKey('Cajero', models.DO_NOTHING, db_column='id_cajero', null=True)  # Field name made lowercase.
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'carton_keno'
 
 
@@ -140,7 +140,7 @@ class GanadoresCartas(models.Model):
 
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'ganadores_cartas'
 
 
@@ -152,7 +152,7 @@ class GanadoresJackpot(models.Model):
 	id_c_k = models.IntegerField(db_column='ID_C_K')  # Field name made lowercase.
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'ganadores_jackpot'
 
 
@@ -165,7 +165,7 @@ class GanadoresKeno(models.Model):
 	id_c_k = models.ForeignKey('CartonKeno', models.DO_NOTHING, db_column='id_c_k')  # Field name made lowercase.
 
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'ganadores_keno'
 
 
@@ -177,7 +177,7 @@ class Jackpot(models.Model):
 	aumento_jackpot = models.FloatField(db_column='aumento_jackpot')  # Field name made lowercase.
 	
 	class Meta:
-		managed = False
+		managed = True
 		db_table = 'jackpot'
 
 

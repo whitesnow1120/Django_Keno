@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pv',
+    'pv'
 ]
 
 MIDDLEWARE = [
@@ -78,16 +78,21 @@ WSGI_APPLICATION = 'PV_Web.wsgi.application'
 
 DATABASES = { 
 
-'default': {
-'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-'NAME': 'KENO', # database name
-'USER': 'doadmin', # username
-'PASSWORD': 'lgoqm34o0s9l7udz', # password 
-'HOST': 'kenodatabase-nyc1-18373-do-user-6913433-0.db.ondigitalocean.com',
-'PORT': '25060',
-'OPTIONS': {'sslmode': 'require'}, 
+# 'default': {
+# 'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+# 'NAME': 'KENO', # database name
+# 'USER': 'doadmin', # username
+# 'PASSWORD': 'lgoqm34o0s9l7udz', # password 
+# 'HOST': 'kenodatabase-nyc1-18373-do-user-6913433-0.db.ondigitalocean.com',
+# 'PORT': '25060',
+# 'OPTIONS': {'sslmode': 'require'}, 
 
-}
+# }
+
+'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 
