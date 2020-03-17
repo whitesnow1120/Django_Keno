@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from .models import *
 from datetime import datetime
+from django.http import HttpResponse
 
 # Create your views here.
 def apuestas(request):
+        
+    return render(request, 'apuestas.html')
+
+def apuestas_ajax(request):
     
-    if request.method == 'POST':
+    if request.is_ajax():
         
         now = datetime.now()
         today_date = now.strftime("%Y-%m-%d")
@@ -28,13 +33,19 @@ def apuestas(request):
         alta_baja = request.POST.get('cartas_alta_baja')
         color = request.POST.get('cartas_color')
         
-        cartoncartas = CartonCartas()
-        cartoncartas.alta_baja = alta_baja
-        cartoncartas.color = color
-        cartoncartas.valor_apuesta_c = valor_apuesta_c
-        cartoncartas.fecha_cartas = today_date
-        cartoncartas.hora_cartas = toady_time
+        if alta_baja != '' and color != '':
         
-        cartoncartas.save()
+            cartoncartas = CartonCartas()
+            cartoncartas.alta_baja = alta_baja
+            cartoncartas.color = color
+            cartoncartas.valor_apuesta_c = valor_apuesta_c
+            cartoncartas.fecha_cartas = today_date
+            cartoncartas.hora_cartas = toady_time
+            
+            cartoncartas.save()
         
-    return render(request, 'apuestas.html')
+        message = 'saved'
+    else:
+        message = 'failed'
+        
+    return HttpResponse(message)

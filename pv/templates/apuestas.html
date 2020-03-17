@@ -101,7 +101,7 @@
             </div><!-- nav-wrapper -->
         </div><!-- az-content-header -->
       
-        <form method="POST" role="form" class="form-inline" action="{% url 'apuestas' %}">{% csrf_token %}
+        <form role="form" class="form-inline" action="">{% csrf_token %}
             <div class="az-content-body">
                 <div class="row row-sm">
                 <!-- ============================================================================= -->
@@ -170,10 +170,10 @@
                     
                             <div class="card-body mg-t-5">
                                 <nav class="nav nav-pills" id="cartas">
-                                    <a class="nav-link" data-toggle="tab" data-color='Negra' data-alta_baja='Alta'><img src="{% static 'pv/img/Cartas/Black1.png' %}"></a>
-                                    <a class="nav-link" data-toggle="tab" data-color='Negra' data-alta_baja='Baja'><img src="{% static 'pv/img/Cartas/Black2.png' %}"></a>
-                                    <a class="nav-link" data-toggle="tab" data-color='Roja' data-alta_baja='Alta'><img src="{% static 'pv/img/Cartas/Red1.png' %}"></a>
-                                    <a class="nav-link" data-toggle="tab" data-color='Roja' data-alta_baja='Baja'><img src="{% static 'pv/img/Cartas/Red2.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Negra' data-alta-baja='Alta'><img src="{% static 'pv/img/Cartas/Black1.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Negra' data-alta-baja='Baja'><img src="{% static 'pv/img/Cartas/Black2.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Roja' data-alta-baja='Alta'><img src="{% static 'pv/img/Cartas/Red1.png' %}"></a>
+                                    <a class="nav-link" data-toggle="tab" data-color='Roja' data-alta-baja='Baja'><img src="{% static 'pv/img/Cartas/Red2.png' %}"></a>
                                 </nav>
                             </div>    
 

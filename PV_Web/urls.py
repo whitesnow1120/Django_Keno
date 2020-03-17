@@ -19,5 +19,6 @@ from pv import views as pv_views
 
 urlpatterns = [
     path('apuestas/', pv_views.apuestas, name='apuestas'),
+    path('apuestas_ajax/', pv_views.apuestas_ajax, name='apuestas_ajax'),
     path('admin/', admin.site.urls),
 ]
